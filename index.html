@@ -139,12 +139,36 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-t
 }
 @media(max-width:600px){
   .grid3,.grid2,.skills,.workflow,.timeline-item{grid-template-columns:1fr;gap:16px}
-  h1{font-size:44px}
-  nav{padding:12px 18px}
-  .navlinks{max-width:52vw}
+  h1{font-size:40px;line-height:1.06}
+  .hero h2{font-size:19px}
+  .hero p,.section-lead{font-size:15px}
+  nav{padding:11px 16px}
+  .logo{font-size:17px}
+  .navlinks{max-width:none;gap:14px;scrollbar-width:none;-ms-overflow-style:none}
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{font-size:12.5px}
   main{padding:0 18px 56px}
-  section{padding:44px 0}
+  section{padding:40px 0}
   .card,.contactbox,.quote{padding:20px}
+  .project{padding:22px 18px}
+  .project h3{font-size:25px}
+  .section-title{font-size:27px}
+  .eyebrow,.section-kicker{letter-spacing:.14em;font-size:10.5px;line-height:1.6}
+  .section-kicker::before{width:18px}
+  .quote blockquote{font-size:21px}
+  .ctas{gap:9px}
+  .btn{padding:11px 15px;font-size:13px}
+  .timeline-item{gap:6px;padding:16px 0}
+  .contactbox a{margin:9px 0;font-size:14px}
+  .step{padding:18px}
+}
+/* hosszú linkek és szakkifejezések ne lógjanak ki */
+.contactbox a,.links a,.card p,.project p,.skill p,.tag,.timeline-item p{overflow-wrap:anywhere}
+@media(max-width:420px){
+  h1{font-size:34px}
+  .project h3{font-size:22px}
+  .section-title{font-size:24px}
+  main{padding:0 14px 48px}
 }
 @media print{
   nav,.ctas,.skiplink{display:none}
