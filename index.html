@@ -205,15 +205,15 @@
 
         <div class="controls">
           <div class="lang-switch">
-            <button class="lang-btn active" type="button">HU</button>
-            <button class="lang-btn" type="button">EN</button>
+            <button class="lang-btn active" type="button" onclick="setLanguage('HU')">HU</button>
+            <button class="lang-btn" type="button" onclick="setLanguage('EN')">EN</button>
           </div>
           <button class="close-btn" type="button" onclick="document.getElementById('promoModal').style.display='none'">✕</button>
         </div>
       </div>
 
       <div class="modal-body">
-        <p class="modal-text">
+        <p class="modal-text" id="promoText">
           Tudta, hogy 2026. augusztus 2-tól az EU AI Act újabb fontos követelményei váltak alkalmazandóvá? Mi lenne, ha néhány perc alatt elkészülne az MI-rendszereihez szükséges szabályzat — a hatályos követelmények alapján?
         </p>
       </div>
@@ -221,13 +221,40 @@
       <div class="divider-line"></div>
 
       <div class="action-container">
-        <a href="/bejelentkezes" class="cta-button">
+        <a href="./belepes.html" class="cta-button" id="ctaBtn">
           Nézd meg, hogyan működik →
         </a>
       </div>
 
     </div>
   </div>
+
+  <script>
+    const translations = {
+      HU: {
+        text: "Tudta, hogy 2026. augusztus 2-tól az EU AI Act újabb fontos követelményei váltak alkalmazandóvá? Mi lenne, ha néhány perc alatt elkészülne az MI-rendszereihez szükséges szabályzat — a hatályos követelmények alapján?",
+        btn: "Nézd meg, hogyan működik →"
+      },
+      EN: {
+        text: "Did you know that from August 2, 2026, new EU AI Act compliance requirements apply? What if your company's AI compliance policies could be generated in minutes?",
+        btn: "See how it works →"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.getElementById('promoText').textContent = translations[lang].text;
+      document.getElementById('ctaBtn').textContent = translations[lang].btn;
+      
+      const buttons = document.querySelectorAll('.lang-btn');
+      buttons.forEach(btn => {
+        if (btn.textContent === lang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
