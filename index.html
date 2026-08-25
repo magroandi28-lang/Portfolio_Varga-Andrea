@@ -289,8 +289,8 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-t
 <p>Vállalati MI-megfelelőségi alkalmazás az <strong>EU AI Act</strong> és a <strong>GDPR</strong> követelményeinek kezelésére. A szervezet rögzítheti MI-rendszereit, az alkalmazás pedig determinisztikus szabálylogikával meghatározza a releváns kötelezettségeket, és verziózott megfelelőségi szabályzatot állít össze pontos jogszabályi hivatkozásokkal.</p>
 <p>A jogi háttér változását ütemezett folyamat figyeli: az érintett szabályokat és dokumentumokat felülvizsgálatra jelöli. A rendszer nem LLM-re bízza a megfelelőségi döntést; azonos bemenethez azonos, visszakövethető eredmény tartozik.</p>
 <div class="links">
-<a href="https://github.com/magroandi28-lang/energia-ai-kontroll" rel="noopener" target="_blank">GitHub repó</a>
-<a href="https://energia-ai-kontroll.vercel.app" rel="noopener" target="_blank">Élő rendszer</a>
+<a href="https://github.com/magroandi28-lang/ai-act-kontroll" rel="noopener" target="_blank">GitHub repó</a>
+<a href="https://energia-ai-kontroll.vercel.app/" rel="noopener" target="_blank">Élő rendszer</a>
 </div>
 </div>
 <div>
@@ -356,32 +356,32 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-t
 <section id="aimunka">
 <div class="section-kicker">AI-native munkamódszer</div>
 <h2 class="section-title">Fejlesztési folyamat</h2>
-<p class="section-lead">Nyelvi modellekkel és fejlesztői ágensekkel dolgozom, de a felelősség nem oszlik meg: minden kiadott kód átolvasáson, futtatáson és teszten megy át, mielőtt bekerül a rendszerbe. Az AI a sebességet adja, a helyességet nem — azt bizonyítani kell.</p>
+<p class="section-lead">A fejlesztés során több nyelvi modellt és fejlesztői ágenst párhuzamosan használok, és az adott feladathoz azt választom, amelyik abban erősebb — például rendszertervezéshez, kódoláshoz, vizuális és felületi megoldásokhoz, szövegalkotáshoz, kutatáshoz vagy tanuláshoz. A modellek eredményeit összevetem és ellenőrzöm; a megoldást nem egyetlen AI-válasz alapján fogadom el, hanem futtatással, teszteléssel és az eredmények ellenőrzésével.</p>
 <div class="workflow">
 <div class="step">
 <div class="num">01</div>
-<h3>Probléma és adat</h3>
-<p>Üzleti cél, adatforrások, minőségi feltételek és mérhető sikerkritériumok meghatározása még a fejlesztés megkezdése előtt.</p>
+<h3>Probléma és források feltérképezése</h3>
+<p>A feladat céljának meghatározása után feltérképezem, milyen külső adatforrások, API-k vagy dokumentumok szükségesek, hogyan érhetők el, és milyen minőségi vagy technikai korlátokkal kell számolni.</p>
 </div>
 <div class="step">
 <div class="num">02</div>
-<h3>Tervezés AI-val</h3>
-<p>Szakirodalmi tájékozódás, architektúra, adatfolyam és tesztesetek kialakítása — a döntéseket magam hozom meg, az eszköz a változatokat állítja elő.</p>
+<h3>Adatbegyűjtés és előkészítés</h3>
+<p>Megtervezem az adatgyűjtési folyamatot, majd az adatokat tisztítom, egységesítem és ellenőrzöm. Kezelem többek között a hiányzó értékeket, duplikációkat, eltérő formátumokat és időalapú eltéréseket.</p>
 </div>
 <div class="step">
 <div class="num">03</div>
-<h3>Determinista implementáció</h3>
-<p>Validált adatok, üzleti szabályok, állapotgépek, sémák, API-k és modellek összeépítése úgy, hogy a döntés mindig ellenőrizhető kódban szülessen.</p>
+<h3>Megoldás tervezése és fejlesztése</h3>
+<p>A problémához választom ki a megfelelő megközelítést: gépi tanulási modellt, szabályalapú logikát, adatfeldolgozó folyamatot vagy alkalmazáskomponenst. Az architektúrát és az integrációkat úgy alakítom ki, hogy a rendszer később ellenőrizhető és továbbfejleszthető legyen.</p>
 </div>
 <div class="step">
 <div class="num">04</div>
-<h3>Validáció és kontroll</h3>
-<p>Automatizált és kézi tesztelés, modellvalidáció, hibaanalízis és dokumentálás. A kiugróan jó eredményt is bizonyítani kell, nem elfogadni.</p>
+<h3>Implementáció AI-eszközökkel</h3>
+<p>Nyelvi modelleket és fejlesztői ágenseket használok kutatáshoz, kódoláshoz, alternatívák összevetéséhez és hibakereséshez. Az AI gyorsítja a munkát, de az elkészült megoldást mindig futtatással és saját ellenőrzéssel fogadom el.</p>
 </div>
 <div class="step">
 <div class="num">05</div>
-<h3>Etikai mérlegelés</h3>
-<p>Normatív etikai mérlegelés: kinek az érdekét szolgálja a rendszer, milyen adatot kezel, és hol viseli a felelősséget ember — mert a felelősség nem delegálható a modellre.</p>
+<h3>Tesztelés, validáció és javítás</h3>
+<p>A rendszer működését kézi és automatizált tesztekkel ellenőrzöm, modell esetén külön teljesítmény- és hibaanalízist végzek. A hibák okát az adatban, a logikában, a modellben vagy az integrációban keresem vissza, majd javítom és újratesztelem.</p>
 </div>
 </div>
 </section>
@@ -399,27 +399,27 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:28px;border-t
 </div>
 <div class="card skill">
 <h3>LLM és agentikus fejlesztés</h3>
-<p><strong>Modellek és API-k:</strong> OpenAI · Google Gemini · Anthropic Claude · GPT-4o-mini · Ollama (helyben futtatott modell)<br/><strong>Fejlesztői ágensek:</strong> Claude Code · Codex · ChatGPT Work · Cowork<br/><strong>Orkesztráció és integráció:</strong> Flowise · CrewAI · prompt engineering · szolgáltatófüggetlen modellréteg · tool- és API-integráció · hívásonkénti költségnaplózás<br/><strong>Kipróbált és kiértékelt eszközök:</strong> Cursor · GitHub Copilot · NotebookLM · Perplexity · PULI · Zapier · videógeneráló eszközök</p>
+<p><strong>Modellek és API-k:</strong> OpenAI · Google Gemini · Anthropic Claude · Ollama (helyben futtatott modell)<br/><strong>Többmodell-eszközhasználat:</strong> modellválasztás feladattípus szerint · eredmények összevetése és ellenőrzése · rendszertervezés · kódolás · vizuális és felületi megoldások · szövegalkotás · kutatás<br/><strong>Fejlesztői ágensek:</strong> Claude Code · Codex · ChatGPT Work · Cowork<br/><strong>Orkesztráció és integráció:</strong> Flowise · CrewAI · prompt engineering · szolgáltatófüggetlen modellréteg · tool- és API-integráció · hívásonkénti költségnaplózás</p>
 </div>
 <div class="card skill">
-<h3>Determinista és grounded AI</h3>
-<p>Determinista üzleti szabályok · állapotgépek · forrásadatokra épülő generálás · strict JSON Schema · Pydantic és Zod séma-validáció · strukturált output · forrásidézet-kényszer · gépi tényellenőrzés · human-in-the-loop · auditálható döntési pontok · engedélyezőlistás ágensek · prompt-injection elleni védelem</p>
+<h3>Determinista és ellenőrizhető AI-rendszerek</h3>
+<p>Determinisztikus üzleti szabályok · állapotgépek · forrásadatokra épülő generálás · strict JSON Schema · Pydantic- és Zod-sémavalidáció · strukturált output · forrásidézet-kényszer · gépi tényellenőrzés · human-in-the-loop · auditálható döntési pontok · engedélyezőlistás ágensek · prompt-injection elleni védelem</p>
 </div>
 <div class="card skill">
-<h3>AI-etika és felelős adatkezelés</h3>
-<p>normatan · AI-etika · adatvédelem és hozzájárulás kezelése · szintetikus adat mint adatvédelmi eszköz · hallucináció kizárása szerkezeti eszközökkel · determinisztikus döntési réteg · személyes adatokra vonatkozó kockázatelemzés · emberi felelősség és jóváhagyás fenntartása</p>
+<h3>AI-etika, normatan és felelős adatkezelés</h3>
+<p>normatan · AI-etika · adatvédelem és hozzájárulás kezelése · szintetikus adat mint adatvédelmi eszköz · AI-rendszerek kockázatainak mérlegelése · determinisztikus döntési réteg · személyes adatokra vonatkozó kockázatelemzés · emberi kontroll, felelősség és jóváhagyás fenntartása</p>
 </div>
 <div class="card skill">
-<h3>Backend, adat és integráció</h3>
-<p><strong>Backend:</strong> Python · FastAPI · Pydantic · REST API · SQL · PostgreSQL · Supabase · Azure Database for PostgreSQL · verziózott sémamigrációk · soralapú jogosultságkezelés<br/><strong>Adatfeldolgozás:</strong> ETL · batching · deduplikáció · naplózás · dokumentumfeldolgozás PDF-, DOCX- és képformátumból OCR-rel · DOCX- és PDF-generálás · szabványos foglalkozási osztályozás (ESCO, FEOR)<br/><strong>Adatforrások:</strong> ENTSO-E · HUPX · MEKH · KSH · Open-Meteo · ECB · Google és Gmail API-k</p>
+<h3>Adatpipeline, backend és integráció</h3>
+<p><strong>Adatbegyűjtés és előkészítés:</strong> külső API-k és adatforrások · ETL · adatgyűjtési folyamatok megtervezése · tisztítás · egységesítés · hiányzó értékek kezelése · deduplikáció · validáció · batching · naplózás<br/><strong>Backend és adatbázis:</strong> Python · FastAPI · Pydantic · REST API · SQL · PostgreSQL · Supabase · Azure Database for PostgreSQL · verziózott sémamigrációk · soralapú jogosultságkezelés<br/><strong>Dokumentum- és forrásfeldolgozás:</strong> PDF-, DOCX- és képfeldolgozás OCR-rel · DOCX- és PDF-generálás · ENTSO-E · HUPX · MEKH · KSH · Open-Meteo · ECB · Google és Gmail API-k</p>
 </div>
 <div class="card skill">
 <h3>Automatizáció és üzemeltetés</h3>
-<p><strong>Fejlesztői környezet:</strong> VS Code · PyCharm · Docker · VMware virtuális gépek · Git és GitHub · Google Colab<br/><strong>Üzemeltetés:</strong> n8n · GitHub Actions CI/CD · Render · Vercel · Hugging Face · OAuth2 · Service Account · ütemezett workflow-k · hibakezelő ágak és központi hibanaplózás · modellmentés és forecast logging</p>
+<p><strong>Fejlesztői környezet és verziókezelés:</strong> IntelliJ IDEA · VS Code · PyCharm · Git · GitHub · Docker · VMware virtuális gépek · Google Colab<br/><strong>Automatizáció és üzemeltetés:</strong> n8n · GitHub Actions CI/CD · Render · Vercel · Hugging Face · OAuth2 · Service Account · ütemezett workflow-k · hibakezelő ágak · központi hibanaplózás · modellmentés és forecast logging</p>
 </div>
 <div class="card skill">
 <h3>Tesztelés és minőség</h3>
-<p>pytest · API-tesztelés · regressziós és funkcionális tesztelés · állapotgép- és üzletilogika-tesztek · UAT · bug reporting · teszteset- és edge case-generálás · hibakeresés · MIME- és fájlvalidáció · autentikáció · kérésszám-korlátozás</p>
+<p><strong>Automatizált tesztelés – képzésben:</strong> Java · JUnit 5 · Selenium IDE · Selenium WebDriver · Postman · SoapUI · TDD · BDD · GitHub Actions CI/CD<br/><strong>Teszttervezés és technikák:</strong> funkcionális és nemfunkcionális tesztelés · regressziós tesztelés · feketedoboz- és fehérdoboz technikák · ekvivalencia-particionálás · határérték-elemzés · döntési tábla · állapotátmenet- és használatieset-tesztelés · felderítő tesztelés · utasítás- és döntési lefedettség<br/><strong>Gyakorlat és minőség:</strong> pytest · API-tesztelés · UAT · teszteset- és edge case-tervezés · bug reporting · hibakeresés · SQL · Git · JIRA · UML · MIME- és fájlvalidáció · autentikációs és hibás bemeneti esetek</p>
 </div>
 <div class="card skill">
 <h3>Frontend és megjelenítés</h3>
